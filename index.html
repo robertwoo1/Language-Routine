@@ -129,11 +129,13 @@
 <body>
   <div class="container">
     <h1>📚 어학 루틴 체크표 PRO</h1>
-    <div style="text-align:center;margin-bottom:20px;color:#666;">
+    <div style="text-align:center;margin-bottom:16px;color:#666; position:relative;">
       연속 학습 · 주간 통계 · 모바일 최적화
-      <div style="font-size:12px; color:#888; text-align:right; margin-bottom:6px;">
-  Since 26.05.17
-</div>
+    </div>
+
+    <div style="display:flex; justify-content:flex-end; margin-bottom:8px; font-size:12px; color:#888;">
+      Since 26.05.17
+    </div>
     </div>
 
     <div class="stats">
@@ -193,22 +195,25 @@
         </tr>
 
         <tr>
-          <td class="lang">독일어$130</td>
+          <td class="lang">독일어</td>
+          <td class="cell" data-key="ger-mon">30</td>
           <td class="cell" data-key="ger-tue"></td>
-          <td class="cell" data-key="ger-wed">50</td>
+          <td class="cell" data-key="ger-wed">30</td>
           <td class="cell" data-key="ger-thu"></td>
-          <td class="cell" data-key="ger-fri">50</td>
+          <td class="cell" data-key="ger-fri">30</td>
           <td class="cell" data-key="ger-sat"></td>
           <td class="cell" data-key="ger-sun"></td>
           <td class="memo">저녁 활용</td>
         </tr>
 
         <tr>
-          <td class="lang">스페인어$130</td>
+          <td class="lang">스페인어</td>
+          <td class="cell" data-key="spa-mon"></td>
+          <td class="cell" data-key="spa-tue">30</td>
           <td class="cell" data-key="spa-wed"></td>
-          <td class="cell" data-key="spa-thu">50</td>
+          <td class="cell" data-key="spa-thu">30</td>
           <td class="cell" data-key="spa-fri"></td>
-          <td class="cell" data-key="spa-sat">50</td>
+          <td class="cell" data-key="spa-sat">30</td>
           <td class="cell" data-key="spa-sun"></td>
           <td class="memo">저녁 활용</td>
         </tr>
@@ -286,8 +291,8 @@
       const defaults = {
         'eng-mon':'30','eng-wed':'30','eng-fri':'30',
         'chi-tue':'30','chi-thu':'30','chi-sat':'30',
-        'ger-mon':'50','ger-wed':'50','ger-fri':'50',
-        'spa-tue':'50','spa-thu':'50','spa-sat':'50',
+        'ger-mon':'30','ger-wed':'30','ger-fri':'30',
+        'spa-tue':'30','spa-thu':'30','spa-sat':'30',
         'ara-mon':'30','ara-wed':'30','ara-fri':'30'
       };
 
