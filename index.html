@@ -9,74 +9,76 @@
 
 body{
     font-family:sans-serif;
-    background:#f4f4f4;
+    background:#f3f3f3;
     margin:0;
-    padding:20px;
+    padding:10px;
 }
 
 .container{
-    max-width:1100px;
+    max-width:1050px;
     margin:auto;
     background:white;
-    border-radius:20px;
-    padding:20px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
+    border-radius:18px;
+    padding:12px;
+    box-shadow:0 0 8px rgba(0,0,0,0.08);
 }
 
 h1{
     text-align:center;
-    margin-bottom:5px;
+    margin:2px 0 2px;
+    font-size:26px;
 }
 
 .subtitle{
     text-align:center;
     color:#666;
-    margin-bottom:10px;
+    font-size:13px;
+    margin-bottom:6px;
 }
 
 .since{
     text-align:right;
-    color:#666;
-    font-size:14px;
-    margin-bottom:15px;
+    color:#777;
+    font-size:12px;
+    margin-bottom:8px;
 }
 
 .year-box{
-    background:#f7f7f7;
-    border-radius:15px;
-    padding:20px;
-    margin-bottom:20px;
+    background:#f8f8f8;
+    border-radius:12px;
+    padding:10px;
+    margin-bottom:10px;
 }
 
 .year-title{
     text-align:center;
-    font-size:24px;
+    font-size:18px;
     font-weight:bold;
-    margin-bottom:20px;
+    margin-bottom:8px;
 }
 
 .year-stats{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
-    gap:15px;
+    grid-template-columns:repeat(5,1fr);
+    gap:6px;
 }
 
 .lang-card{
     background:white;
-    border-radius:15px;
-    padding:15px;
+    border-radius:10px;
+    padding:6px;
     text-align:center;
-    box-shadow:0 0 5px rgba(0,0,0,0.08);
+    box-shadow:0 0 3px rgba(0,0,0,0.06);
 }
 
 .lang-card h3{
     margin:0;
-    font-size:20px;
+    font-size:13px;
 }
 
 .lang-card p{
-    margin-top:10px;
-    font-size:32px;
+    margin:3px 0 0;
+    font-size:20px;
     font-weight:bold;
 }
 
@@ -84,25 +86,25 @@ table{
     width:100%;
     border-collapse:collapse;
     overflow:hidden;
-    border-radius:15px;
+    border-radius:12px;
 }
 
 th,td{
     border:1px solid #ddd;
     text-align:center;
-    padding:14px;
-    font-size:18px;
+    padding:8px;
+    font-size:14px;
 }
 
 th{
-    background:#f0f0f0;
+    background:#f1f1f1;
 }
 
 .study-cell,
 .checkbox{
     cursor:pointer;
     user-select:none;
-    transition:0.15s;
+    transition:0.12s;
 }
 
 .study-cell:hover,
@@ -112,25 +114,26 @@ th{
 
 .footer{
     text-align:center;
-    margin-top:15px;
+    margin-top:8px;
     color:#666;
-    line-height:1.6;
+    line-height:1.4;
+    font-size:12px;
 }
 
 .button-group{
     display:flex;
-    gap:10px;
-    margin-top:25px;
+    gap:8px;
+    margin-top:10px;
 }
 
 button{
     flex:1;
-    padding:18px;
+    padding:10px;
     border:none;
-    border-radius:15px;
+    border-radius:10px;
     background:#222;
     color:white;
-    font-size:18px;
+    font-size:14px;
     cursor:pointer;
 }
 
@@ -140,21 +143,42 @@ button:hover{
 
 @media(max-width:700px){
 
-th,td{
-    padding:10px;
-    font-size:14px;
+body{
+    padding:6px;
+}
+
+.container{
+    padding:8px;
+}
+
+h1{
+    font-size:22px;
+}
+
+.subtitle{
+    font-size:11px;
+}
+
+.year-title{
+    font-size:15px;
 }
 
 .lang-card h3{
-    font-size:16px;
+    font-size:11px;
 }
 
 .lang-card p{
-    font-size:24px;
+    font-size:16px;
+}
+
+th,td{
+    padding:6px;
+    font-size:11px;
 }
 
 button{
-    font-size:14px;
+    font-size:12px;
+    padding:8px;
 }
 
 }
@@ -289,20 +313,17 @@ Since 26.05.17
 </table>
 
 <div class="footer">
-✅ 셀을 터치하면 완료 체크됩니다.<br>
-데이터는 브라우저에 자동 저장됩니다.
+✅ 셀 터치 시 자동 저장
 </div>
 
 <div class="button-group">
 
 <button onclick="resetWeek()">
-새 주 시작하기<br>
-(체크 초기화)
+새 주 시작하기
 </button>
 
 <button onclick="newYear()">
-한 해 시작하기<br>
-(1년 횟수 초기화)
+한 해 시작하기
 </button>
 
 </div>
