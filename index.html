@@ -6,6 +6,7 @@
 <title>어학 루틴 체크표 PRO</title>
 
 <style>
+
 body{
     font-family:sans-serif;
     background:#f4f4f4;
@@ -14,7 +15,7 @@ body{
 }
 
 .container{
-    max-width:1000px;
+    max-width:1100px;
     margin:auto;
     background:white;
     border-radius:20px;
@@ -30,85 +31,103 @@ h1{
 .subtitle{
     text-align:center;
     color:#666;
-    margin-bottom:20px;
+    margin-bottom:10px;
+}
+
+.since{
+    text-align:right;
+    color:#666;
+    font-size:14px;
+    margin-bottom:15px;
 }
 
 .year-box{
-    text-align:center;
-    margin-bottom:20px;
     background:#f7f7f7;
-    padding:15px;
     border-radius:15px;
+    padding:20px;
+    margin-bottom:20px;
 }
 
 .year-title{
+    text-align:center;
     font-size:24px;
     font-weight:bold;
-    margin-bottom:15px;
+    margin-bottom:20px;
 }
 
 .year-stats{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(120px,1fr));
-    gap:10px;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    gap:15px;
 }
 
 .lang-card{
     background:white;
-    border-radius:12px;
-    padding:10px;
+    border-radius:15px;
+    padding:15px;
+    text-align:center;
     box-shadow:0 0 5px rgba(0,0,0,0.08);
 }
 
 .lang-card h3{
     margin:0;
-    font-size:18px;
+    font-size:20px;
 }
 
 .lang-card p{
-    margin:5px 0 0;
-    font-size:28px;
+    margin-top:10px;
+    font-size:32px;
     font-weight:bold;
 }
 
 table{
     width:100%;
     border-collapse:collapse;
-    margin-top:20px;
+    overflow:hidden;
+    border-radius:15px;
 }
 
 th,td{
     border:1px solid #ddd;
     text-align:center;
-    padding:12px;
+    padding:14px;
+    font-size:18px;
 }
 
 th{
     background:#f0f0f0;
 }
 
+.study-cell,
 .checkbox{
     cursor:pointer;
-    font-size:24px;
+    user-select:none;
+    transition:0.15s;
+}
+
+.study-cell:hover,
+.checkbox:hover{
+    background:#f5f5f5;
 }
 
 .footer{
     text-align:center;
     margin-top:15px;
     color:#666;
+    line-height:1.6;
 }
 
 .button-group{
     display:flex;
     gap:10px;
-    margin-top:20px;
+    margin-top:25px;
 }
 
 button{
     flex:1;
-    padding:15px;
+    padding:18px;
     border:none;
-    border-radius:12px;
+    border-radius:15px;
     background:#222;
     color:white;
     font-size:18px;
@@ -116,36 +135,30 @@ button{
 }
 
 button:hover{
-    opacity:0.9;
-}
-
-.since{
-    text-align:right;
-    margin-bottom:10px;
-    color:#666;
-    font-size:14px;
+    opacity:0.92;
 }
 
 @media(max-width:700px){
 
 th,td{
-    padding:8px;
+    padding:10px;
     font-size:14px;
 }
 
-.checkbox{
-    font-size:20px;
+.lang-card h3{
+    font-size:16px;
+}
+
+.lang-card p{
+    font-size:24px;
 }
 
 button{
-    font-size:15px;
-}
-
-.year-title{
-    font-size:20px;
+    font-size:14px;
 }
 
 }
+
 </style>
 </head>
 
@@ -154,14 +167,19 @@ button{
 <div class="container">
 
 <h1>📚 어학 루틴 체크표 PRO</h1>
-<div class="subtitle">연속 학습 · 모바일 최적화</div>
 
-<div class="since">Since 26.05.17</div>
+<div class="subtitle">
+모바일 자동 저장 · 주간 체크 · 연간 통계
+</div>
+
+<div class="since">
+Since 26.05.17
+</div>
 
 <div class="year-box">
 
-<div class="year-title">
-<span id="yearLabel">2026년 학습횟수</span>
+<div class="year-title" id="yearLabel">
+2026년 학습횟수
 </div>
 
 <div class="year-stats">
@@ -210,11 +228,11 @@ button{
 
 <tr data-lang="english">
 <th>영어</th>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
 <td class="checkbox"></td>
 <td>취침 전</td>
@@ -223,22 +241,22 @@ button{
 <tr data-lang="chinese">
 <th>중국어</th>
 <td class="checkbox"></td>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
 <td>취침 전</td>
 </tr>
 
 <tr data-lang="german">
 <th>독일어</th>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
 <td class="checkbox"></td>
 <td>저녁 활용</td>
@@ -247,22 +265,22 @@ button{
 <tr data-lang="spanish">
 <th>스페인어</th>
 <td class="checkbox"></td>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
 <td>저녁 활용</td>
 </tr>
 
 <tr data-lang="arabic">
 <th>아랍어</th>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
-<td>30</td>
+<td class="study-cell">30</td>
 <td class="checkbox"></td>
 <td class="checkbox"></td>
 <td>취침 전</td>
@@ -272,17 +290,19 @@ button{
 
 <div class="footer">
 ✅ 셀을 터치하면 완료 체크됩니다.<br>
-데이터는 휴대폰 브라우저에 자동 저장됩니다.
+데이터는 브라우저에 자동 저장됩니다.
 </div>
 
 <div class="button-group">
 
 <button onclick="resetWeek()">
-새 주 시작하기<br>(체크 초기화)
+새 주 시작하기<br>
+(체크 초기화)
 </button>
 
 <button onclick="newYear()">
-한 해 시작하기<br>(1년 횟수 초기화)
+한 해 시작하기<br>
+(1년 횟수 초기화)
 </button>
 
 </div>
@@ -294,11 +314,13 @@ button{
 let currentYear = localStorage.getItem("currentYear") || 2026;
 
 let yearlyCounts = JSON.parse(localStorage.getItem("yearlyCounts")) || {
+
 english:0,
 chinese:0,
 german:0,
 spanish:0,
 arabic:0
+
 };
 
 document.getElementById("yearLabel").innerText =
@@ -306,9 +328,11 @@ currentYear + "년 학습횟수";
 
 updateCounts();
 
-const cells = document.querySelectorAll(".checkbox");
+const cells = document.querySelectorAll(".study-cell, .checkbox");
 
 cells.forEach((cell,index)=>{
+
+cell.dataset.original = cell.innerHTML;
 
 const saved = localStorage.getItem("cell"+index);
 
@@ -319,11 +343,15 @@ cell.innerHTML="✅";
 cell.addEventListener("click",()=>{
 
 if(cell.innerHTML==="✅"){
-cell.innerHTML="";
+
+cell.innerHTML = cell.dataset.original;
 decreaseCount(cell);
+
 }else{
+
 cell.innerHTML="✅";
 increaseCount(cell);
+
 }
 
 saveState();
@@ -346,8 +374,10 @@ function decreaseCount(cell){
 
 const row = cell.parentElement.dataset.lang;
 
-if(yearlyCounts[row]>0){
+if(yearlyCounts[row] > 0){
+
 yearlyCounts[row]--;
+
 }
 
 updateCounts();
@@ -383,9 +413,13 @@ function saveState(){
 cells.forEach((cell,index)=>{
 
 if(cell.innerHTML==="✅"){
+
 localStorage.setItem("cell"+index,"checked");
+
 }else{
+
 localStorage.removeItem("cell"+index);
+
 }
 
 });
@@ -396,7 +430,8 @@ function resetWeek(){
 
 cells.forEach((cell,index)=>{
 
-cell.innerHTML="";
+cell.innerHTML = cell.dataset.original;
+
 localStorage.removeItem("cell"+index);
 
 });
@@ -413,14 +448,18 @@ document.getElementById("yearLabel").innerText =
 currentYear + "년 학습횟수";
 
 yearlyCounts = {
+
 english:0,
 chinese:0,
 german:0,
 spanish:0,
 arabic:0
+
 };
 
 updateCounts();
+
+resetWeek();
 
 alert(currentYear + "년이 시작되었습니다!");
 
